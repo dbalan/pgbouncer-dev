@@ -14,11 +14,11 @@
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 NAME=pgbouncer
-DAEMON=/usr/sbin/$NAME
+DAEMON=/usr/bin/$NAME
 PIDDIR=/var/run/postgresql
 PIDFILE=$PIDDIR/$NAME.pid
 OPTS="-d /etc/pgbouncer/$NAME.ini"
-RUNASUSER="postgres"
+RUNASUSER="Debian-pgbouncer"
 
 # Include pgbouncer defaults if available
 if [ -f /etc/default/pgbouncer ] ; then

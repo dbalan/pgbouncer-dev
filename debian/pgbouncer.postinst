@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+. /usr/share/debconf/confmodule
+if ! getent passwd Debian-pgbouncer > /dev/null ; then
+  echo 'Adding system-user for pgbouncer (v4)' 1>&2
+  adduser --system --group --quiet \
+    --no-create-home --disabled-login --force-badname Debian-pgbouncer
+fi
+# Create directories for log etc
+# install also fixes permissions.
+#install -d -oDebian-exim -gadm -m2750 /var/log/exim4
+install -d -oDebian-pgbouncer -gDebian-pgbouncer -m750 /var/run/postgresql
