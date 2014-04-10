@@ -1,3 +1,9 @@
+pgbouncer (1.5.4-1.2) UNRELEASED; urgency=low
+
+  * Non-maintainer upload.
+  * Include init file for deamon
+ -- Dhananjay Balan <dhananjay@plivo.com>  Thu, 10 Apr 2014 10:24:17 +0000
+
 pgbouncer (1.5.4-1) unstable; urgency=low
 
   * v1.5.4
