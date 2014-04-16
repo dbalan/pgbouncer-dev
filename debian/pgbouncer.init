@@ -38,7 +38,7 @@ case "$1" in
     # Check if we are still disabled in /etc/default/pgbouncer
     [ "${START:-}" = "0" ] && exit 0
     echo -n "Starting server: $NAME"
-    test -d $PIDDIR || install -d -o postgres -g postgres -m 2775 $PIDDIR
+    test -d $PIDDIR || install -d -o Debian-pgbouncer -g Debian-pgbouncer -m 2775 $PIDDIR
     $SSD --start --chuid $RUNASUSER --oknodo -- $OPTS 2> /dev/null
     ;;
 
