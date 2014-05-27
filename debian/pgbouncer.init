@@ -53,6 +53,8 @@ case "$1" in
     ;;
 
   restart)
+    echo -n "Stopping server: $NAME"
+    $SSD --stop --retry 30 --oknodo
     $SSD --status
     if [ $? -eq 0 ] ; then
     echo -n "Invoking $NAME restart"
